@@ -5,7 +5,7 @@ class Trader:
     def __init__(self, symbol, cash, fee_percent=0.1, stop_loss_percent=5.0, max_holding_days=30):
         self.symbol = symbol
         self.cash = cash
-        self.fee_percent = fee_percent  # Platform fee in percentage
+        self.fee_percent = fee_percent  # Total platform fee in percentage
         self.holdings = 0  # Number of units (crypto coins)
         self.last_purchase_price = 0
         self.purchase_date = None
@@ -98,7 +98,7 @@ if __name__ == "__main__":
         raise ValueError("Invalid asset choice. Choose from 'bitcoin' or 'solana'.")
 
     symbol = assets[asset_choice]
-    initial_cash = 3000  # Starting with $10,000
+    initial_cash = 3000
     start_date = datetime.strptime("2023-11-01", "%Y-%m-%d")
     end_date = datetime.strptime("2024-10-01", "%Y-%m-%d")
 
